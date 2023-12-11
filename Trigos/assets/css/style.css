@@ -1,0 +1,468 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #363535;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #181f26 100%);
+  overflow-x: hidden;
+}
+
+/* HOME > BLOG */
+a {
+  color: #e43c5c;
+  text-decoration: none;
+}
+a:hover {
+  color: #ea6981;
+  text-decoration: none;
+}/* END */
+
+/* BTN "MISSÕES SAIBA-MAIS" */
+.bottone .leftwidth {
+  border: 0;
+  
+  transition: all 1s linear;
+  background: linear-gradient(
+    orangered 0 0
+  )
+  left var(--e, 100%) bottom 0% /
+  var(--o, 10%) 5px
+  no-repeat,   
+  transparent;
+}
+.bottone .leftwidth:hover{
+  --e: 0%;
+  --o: 50%;
+  transition: all 0.3s;
+  background-size: 0.3s 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+.card {
+  background-color: transparent;
+}
+.textFont{
+  font-size: justify;
+}
+.inf_card {
+  background-color: white;
+  overflow-x: hidden;
+}
+/* --------------------------------------------------- */
+/*               AJUSTE DE FONTE - "AÇÕES"             */
+/* --------------------------------------------------- */
+.img-fluid {
+  height: auto;
+  width: 100%;
+}
+
+section .conteudo_center li {
+  line-height: 30px;
+  color: #c1cfdb;
+  font: 400 16px/24px IBM Plex Sans,sans-serif;
+}
+
+section .conteudo_center .lightText {
+  color: #fff
+}
+
+
+/* === CONTEUDO-RIGHT ===*/
+/*        LIST-02       */
+
+/* ==> Cor-do-Texto <== */
+.link {
+  display: block;
+  position: relative;
+  padding: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+section .conteudo_right a:hover {
+  color: #f46036;
+  text-decoration: none;
+}
+
+/*      FONT BUTTON     */
+section .conteudo_right div .h4 {
+  padding: 16px 24px;
+  margin-bottom: 0;
+  background: #313d49;
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+section .conteudo_right ul {
+  padding: 12px;
+}
+
+section .conteudo_right ul li {
+  margin: auto;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 22px 0;
+  border-bottom: 1px dotted #4a5a6a;
+  cursor: pointer;
+  list-style-type: none;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  section .conteudo_right div .h4 {
+    padding: 6px 4px;
+    text-align: left;
+    font-size: 2vw;
+    line-height: 24px;
+  }
+}
+/*--------------------------------------------------------------
+                   SETA DE RETORNO AO LOB |^|
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #36353541;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #36353541;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: #181f26;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar>ul>li {
+  white-space: nowrap;
+  padding: 10px 0 10px 24px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 15px;
+  padding: 0 4px;
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: 0.4px;
+  position: relative;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 50px;
+}
+
+.navbar>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #e43c5c;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #fff;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 24px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #493c3e;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #e43c5c;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section .conteudo_center{
+  padding: 25px 10px 0px 0px;
+  overflow-x: hidden;
+}
+
+.section-bg {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  line-height: 1;
+  margin: 0;
+  background: #fdeff2;
+  color: #e43c5c;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.section-title h3 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-title h3 span {
+  color: #e43c5c;
+}
+
+.section-title p {
+  margin: 15px auto 0 auto;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .section-title p {
+    width: 50%;
+  }
+}
+
+section .carousel-caption{bottom:25%;right:15%;left:60%;background:rgba(255,68,0,0.29);border:2px solid #ff4500}
+section .carousel-text{background:#000;color:#fff;padding:30px 40px}
+.bottone .exceed::after{content:"";position:absolute;bottom:0;left:0;border:0;width:0;height:100%;background-color:#ff4500;transition:all .8s cubic-bezier(0.7,-0.5,0.2,2);z-index:-1}
+.bottone .exceed:hover{color:#fff;border:2px solid #0050}
+.bottone .exceed:hover::after{background-color:#ff4500;width:100%;border:0;mix-blend-mode:multiply}
+.ImgProject{height:40rem}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  color: #8296aa;
+  font-size: 14px;
+  background: #f6f4f4;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.24);
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: rgba(0, 0, 0, 0.315);
+}
+
+
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #f46036;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* COR DOS LINKS */
+#footer .footer-top .footer-links ul a {
+  color: #8296aa;
+  transition: 0.5s;
+  display: inline-block;
+  line-height: 1;
+}
+#footer .footer-top .footer-links ul a:hover {
+  color: #f46036;
+}/* END */
+
+/* BOTÃO "CONTACT US" */
+#footer .footer-newsletter {
+  background: #e0542ec7;
+  transition: 0.5s;
+}
+#footer .footer-newsletter:hover {
+  background: #f46036;
+}/* END */
+
+#footer .credits {
+  padding-top: 5px;
+  font-size: 13px;
+  color: #8296aa;
+}
+
+#footer .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: #8296aa;
+  padding: 1px 0;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  color: #8296aa;
+  text-decoration: none;
+}

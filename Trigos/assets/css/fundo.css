@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+  }
+*{
+  box-sizing: border-box;
+}
+
+.cardeHead{
+    display: flex;
+    /* background: tomato; */
+    width: 100%;
+    color: #fff;
+    padding: 50px;
+}
+
+  /* ====== INFORMAÇÕES INICIAIS ====== */
+.cards {
+    display: flex;
+    width: 100%;
+    position: relative;
+    color: #fff;   
+}
+  
+.cards > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards .left{
+    flex: 0 0 100%;
+    flex-direction: column;
+}
+.cards .img_fundo{
+    position: absolute;
+    right: 0;
+    left: 0;
+    /* margin: auto; */
+    top: 100%;
+    bottom: 0%;
+    padding: 200px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    background-attachment: fixed;
+}
+.cards,.card02 img{
+    max-width: 100%;
+}
+
+
+/* ====== ONG'S MISSIONARIAS ====== */
+.card02 {
+    width: 100%;
+    position: relative;  
+}
+  
+.card02 > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card02 .left{
+    flex: 0 0 100%;
+    padding: 50px;
+    flex-direction: column;
+}
+.card02 .img_fundo{
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0%;
+    bottom: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    background-attachment: fixed;
+    background-image: url(https://i.ibb.co/X78jQBy/das-1.jpg);
+}
+
+body .projects{
+    background-image: url('/assets/img/fundo.gif');
+    /* background-size: cover;
+    height: 100vh; */
+    padding:0;
+    margin:0;
+}
